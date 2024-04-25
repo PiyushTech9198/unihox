@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'WebView Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Unihox',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -54,31 +55,31 @@ class _WebViewPageState extends State<WebViewPage> {
 
     return Scaffold(
       key: _key,
-      appBar: AppBar(
-        title: ClipRRect(
-          borderRadius: BorderRadius.circular(5),
-          child: Image.asset(
-            "assets/unihox.png",
-            fit: BoxFit.cover,
-            height: 50,
-            width: 150,
-          ),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            onPressed: () => _reload(),
-          ),
-          IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () => _goBack(),
-          ),
-          IconButton(
-            icon: const Icon(Icons.arrow_forward),
-            onPressed: () => _goForward(),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: ClipRRect(
+      //     borderRadius: BorderRadius.circular(5),
+      //     child: Image.asset(
+      //       "assets/unihox.png",
+      //       fit: BoxFit.cover,
+      //       height: 50,
+      //       width: 150,
+      //     ),
+      //   ),
+      //   actions: <Widget>[
+      //     IconButton(
+      //       icon: const Icon(Icons.refresh),
+      //       onPressed: () => _reload(),
+      //     ),
+      //     IconButton(
+      //       icon: const Icon(Icons.arrow_back),
+      //       onPressed: () => _goBack(),
+      //     ),
+      //     IconButton(
+      //       icon: const Icon(Icons.arrow_forward),
+      //       onPressed: () => _goForward(),
+      //     ),
+      //   ],
+      // ),
       body: Stack(
         children: [
           InAppWebView(
